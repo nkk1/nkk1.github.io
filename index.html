@@ -6,49 +6,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <title>magical calculator</title>
   </head>
   <body>
 
+    <script>
+    function find_pfp_ratio() {
+      const pao = document.getElementById('pao');
+      const fio = document.getElementById('fio');
+      const peep = document.getElementById('peep');
+      const result = document.getElementById('result');
+
+      const ans = (parseInt(pao.value) * 10) / (parseInt(fio.value) * parseInt(peep.value));
+
+      if(isNaN(ans)){
+        alert('enter all values');  
+      } else {
+        result.innerHTML = ans;
+      }
+    }
+    </script>
 
     <nav class="navbar navbar-dark bg-dark">
       <a class="navbar-brand" href="#">Magic calculator</a>
     </nav>
 
     <div class="container">
-
       <h2> Calculator </h2>
-
-
       <form>
         <div class="form-group">
-          <label for="exampleFormControlInput1">input 1</label>
-          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="12.34">
-        
-
+          <label for="pao">PaO2</label>
+          <input type="email" class="form-control" id="pao">
           <br/>
-       
-          <label for="exampleFormControlInput1">input 2</label>
-          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="12.34">
-      
-
+          <label for="fio">FiO2</label>
+          <input type="email" class="form-control" id="fio">
           <br/>
-    
-          <label for="exampleFormControlInput1">Result</label>
-          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="...">
+          <label for="peep">PEEP</label>
+          <input type="email" class="form-control" id="peep">
+          <br/>
+          <button type="button" class="btn btn-primary" onclick="find_pfp_ratio()">P/FP Ratio</button>
+          <br/>
+          <br/>
+          <h4 id='result'><h4>
         </div>
       </form>
-
       <br/>
-
       <hr/>
-
       <h2>for more details</h2>
       <a class="navbar-brand" href="https://www.google.com">link1</a>
       <a class="navbar-brand" href="https://www.yahoo.com">link2</a>
-
     </div>
 
   </body>
