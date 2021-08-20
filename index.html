@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" />
 
-    <title>magical calculator</title>
+    <title>PFP ratio calculator</title>
   </head>
   <body>
 
@@ -19,12 +19,12 @@
       const peep = document.getElementById('peep');
       const result = document.getElementById('result');
 
-      const ans = (parseInt(pao.value) * 10) / (parseInt(fio.value) * parseInt(peep.value));
+      const answer = (parseFloat(pao.value) * 10) / (parseFloat(fio.value) * parseFloat(peep.value));
 
-      if(isNaN(ans)){
-        alert('enter all values');  
+      if(isNaN(answer)){
+        alert('please enter proper values in all fields');
       } else {
-        result.innerHTML = ans;
+        result.innerHTML = answer.toString();
       }
     }
     </script>
@@ -35,12 +35,12 @@
 
     <div class="container">
       <h2> Calculator </h2>
-      <form>
+      <form class="row g-3 needs-validation" novalidate>
         <div class="form-group">
-          <label for="pao">PaO2</label>
+          <label for="pao">PaO<sub>2</sub></label>
           <input type="email" class="form-control" id="pao">
           <br/>
-          <label for="fio">FiO2</label>
+          <label for="fio">FiO<sub>2</sub></label>
           <input type="email" class="form-control" id="fio">
           <br/>
           <label for="peep">PEEP</label>
@@ -54,11 +54,9 @@
       </form>
       <br/>
       <hr/>
-      <h2>for more details</h2>
-      <a class="navbar-brand" href="https://www.google.com">link1</a>
-      <a class="navbar-brand" href="https://www.yahoo.com">link2</a>
+      <h2>Reference</h2>
+      <a href="research.pdf" target="_blank">research paper</a>
     </div>
 
   </body>
 </html>
-
