@@ -24,13 +24,13 @@
       if(isNaN(answer)){
         alert('please enter proper values in all fields');
       } else {
-        result.innerHTML = answer.toString();
+        result.innerHTML = 'P/FP Ratio: ' + answer.toString();
       }
     }
     </script>
 
     <nav class="navbar navbar-dark bg-dark">
-      <a class="navbar-brand" href="#">PFP ratio calculator</a>
+      <a class="navbar-brand" href="#">Magic calculator</a>
     </nav>
 
     <div class="container">
@@ -46,16 +46,16 @@
           <label for="peep">PEEP</label>
           <input type="email" class="form-control" id="peep">
           <br/>
-          <button type="button" class="btn btn-primary" onclick="find_pfp_ratio()">P/FP Ratio</button>
+          <button type="button" class="btn btn-primary" onclick="find_pfp_ratio()">Calculate</button>
           <br/>
           <br/>
-          <h4 id='result'><h4>
+          <label id='result' class="fs-5 fw-light"><label>
         </div>
       </form>
       <br/>
       <hr/>
       <h2>Reference</h2>
-      <a href="research.pdf" target="_blank">research paper</a>
+      <a href="https://annalsofintensivecare.springeropen.com/articles/10.1186/s13613-021-00908-3" target="_blank">research paper</a>
     </div>
 
   </body>
